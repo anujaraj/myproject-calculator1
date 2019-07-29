@@ -1,0 +1,67 @@
+<html>
+<title></title>
+<body>
+<input type="text" id="n1" name="no1">
+<br/>
+<button onclick="result()">go</button>
+<script>
+function result()
+{
+var a = document.getElementById("n1").value
+console.log(a);
+
+var len = a.length;
+console.log(len);
+var i;
+var count = 0;
+var s = a;
+for(i=0;i<len;i++)
+{var char = a.charAt(i);
+console.log(char);
+count++;
+console.log(count);
+if(char=="+")
+ { 
+ var c = parseInt( a.slice(0,(count-1)));
+ console.log(c);
+ var d = parseInt(a.slice(count,len));
+ console.log(d);
+ document.write("the answer is"+"=");
+document.write(c+d);
+break;
+ }
+ if(char=="-")
+ { 
+ var c = parseInt( a.slice(0,(count-1)));
+ console.log(c);
+ var d = parseInt(a.slice(count,len));
+ console.log(d);
+ document.write("the answer is"+"=");
+document.write(c-d);
+break;
+ }
+ if(char=="*")
+ { 
+ var c = parseInt( a.slice(0,(count-1)));
+ console.log(c);
+ var d = parseInt(a.slice(count,len));
+ console.log(d);
+ document.write("the answer is"+"=");
+document.write(c*d);
+break;
+ }
+ if(char=="/")
+ { 
+ var c = parseInt( a.slice(0,(count-1)));
+ console.log(c);
+ var d = parseInt(a.slice(count,len));
+ console.log(d);
+ document.write("the answer is"+"=");
+document.write(c/d);
+break;
+ }
+}
+}
+</script>
+</body> 
+</html>
